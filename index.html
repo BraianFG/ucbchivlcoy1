@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iglesia Centro Bíblico Chivilcoy</title>
+  <meta name="description" content="Iglesia Centro Bíblico Chivilcoy — Una comunidad centrada en la Palabra de Dios. Sola Gratia · Sola Fide · Solus Christus · Sola Scriptura · Soli Deo Gloria." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+   <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="faviconIgle.ico" />
+  <link rel="apple-touch-icon" href="faviconIgle.ico" />
+
+  <!-- Open Graph / Facebook -->
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Iglesia Centro Bíblico Chivilcoy" />
+<meta property="og:description" content="Una comunidad centrada en la Palabra de Dios. Para alabanza de la gloria de su gracia — Efesios 1:6" />
+<meta property="og:image" content="https://braianfg.github.io/UCBChivlcoy/iglesia.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Iglesia Centro Bíblico Chivilcoy" />
+<meta property="og:locale" content="es_AR" />
+<meta property="og:site_name" content="Iglesia Centro Bíblico Chivilcoy" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Iglesia Centro Bíblico Chivilcoy" />
+  <meta name="twitter:description" content="Una comunidad centrada en la Palabra de Dios. Para alabanza de la gloria de su gracia — Efesios 1:6" />
+  <meta name="twitter:image" content="iglesia.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --orange: #E85D04;
+      --orange-dark: #D9480F;
+      --orange-light: #F48C06;
+      --orange-soft: #FFF4EB;
+      --white: #FFFFFF;
+      --off-white: #FFFBF7;
+      --text: #1A1A1A;
+      --text-muted: #5A5A5A;
+      --gray: #F5F5F5;
+      --shadow: 0 10px 40px rgba(232, 93, 4, 0.12);
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      background: var(--off-white);
+      line-height: 1.6;
+    }
+
+    /* ========== NAV ========== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(232, 93, 4, 0.1);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .logo-nav .cross {
+      width: 28px;
+      height: 28px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--orange);
+    }
+
+    .nav-cta {
+      background: var(--orange);
+      color: white !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-weight: 600 !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--orange-dark);
+      color: white !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(160deg, var(--orange) 0%, var(--orange-dark) 55%, #C2410C 100%);
+      color: white;
+      text-align: center;
+      padding: 6rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.12) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+
+    .hero-logo {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 1.8rem;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .hero-logo .cross-icon {
+      font-size: 2.4rem;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: -4px;
+    }
+
+    .hero-logo .bible-icon {
+      font-size: 2.8rem;
+      color: var(--orange);
+      line-height: 1;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero .tagline {
+      font-size: 1.15rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .hero .verse {
+      font-style: italic;
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 2.2rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.25s;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--orange);
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-soft);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: white;
+    }
+
+    /* ========== SECTIONS ========== */
+    section {
+      padding: 5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      text-align: center;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto 3rem;
+      font-size: 1.05rem;
+    }
+
+    /* ========== SOLAS ========== */
+    .solas {
+      background: white;
+    }
+
+    .solas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .sola-card {
+      background: var(--orange-soft);
+      border-radius: var(--radius);
+      padding: 1.8rem 1.2rem;
+      text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s;
+      border: 1px solid rgba(232, 93, 4, 0.12);
+    }
+
+    .sola-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .sola-card .latin {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--orange);
+      margin-bottom: 0.4rem;
+    }
+
+    .sola-card .meaning {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ========== ABOUT ========== */
+    .about {
+      background: var(--off-white);
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      color: var(--text);
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .about-text strong {
+      color: var(--orange);
+    }
+
+    .about-visual {
+      background: linear-gradient(145deg, var(--orange), var(--orange-dark));
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      color: white;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .about-visual .big-cross {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      opacity: 0.95;
+    }
+
+    .about-visual p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      line-height: 1.5;
+    }
+
+    /* ========== LOCATION ========== */
+    .location {
+      background: white;
+    }
+
+    .location-card {
+      background: var(--orange-soft);
+      border-radius: 24px;
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      border: 1px solid rgba(232, 93, 4, 0.15);
+    }
+
+    .location-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .location-info p {
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .location-info .icon {
+      color: var(--orange);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .map-placeholder {
+      background: white;
+      border-radius: 16px;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed rgba(232, 93, 4, 0.3);
+      color: var(--text-muted);
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .map-placeholder a {
+      color: var(--orange);
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 0.8rem;
+      display: inline-block;
+    }
+
+    .map-placeholder a:hover {
+      text-decoration: underline;
+    }
+
+    /* ========== INVITE ========== */
+    .invite {
+      background: linear-gradient(160deg, var(--orange) 0%, var(--orange-dark) 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .invite h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 1rem;
+    }
+
+    .invite p {
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      opacity: 0.95;
+      font-size: 1.1rem;
+    }
+
+    /* ========== SOCIAL ========== */
+    .social {
+      background: var(--off-white);
+    }
+
+    .social-grid {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 1.8rem 2rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text);
+      min-width: 180px;
+      transition: transform 0.25s, box-shadow 0.25s;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+
+    .social-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .social-card .icon {
+      font-size: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .social-card .name {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .social-card .handle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: #1A1A1A;
+      color: rgba(255,255,255,0.75);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    footer .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    footer .verse-footer {
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+      opacity: 0.8;
+    }
+
+    footer .copy {
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.8rem;
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .about-content,
+      .location-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 5.5rem;
+      }
+    }
+
+      /* ========== WHATSAPP FLOTANTE ========== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      transition: transform 0.25s, box-shadow 0.25s;
+      text-decoration: none;
+      animation: pulse-wa 2.5s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
+    }
+
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+
+    .whatsapp-float .tooltip {
+      position: absolute;
+      right: 72px;
+      background: #1A1A1A;
+      color: white;
+      padding: 0.5rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+
+    .whatsapp-float:hover .tooltip {
+      opacity: 1;
+    }
+
+    @keyframes pulse-wa {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo-nav">
+        <span class="cross">✝</span>
+        <span>Centro Bíblico Chivilcoy
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuBtn" aria-label="Menú">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#solas">Nuestra Fe</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-logo">
+        <div class="cross-icon">✝</div>
+        <div class="bible-icon">📖</div>
+      </div>
+      <h1>Iglesia Centro Bíblico<br>Chivilcoy</h1>
+      <p class="tagline">Una comunidad centrada en la Palabra de Dios</p>
+      <p class="verse">«Para alabanza de la gloria de su gracia» — Efesios 1:6</p>
+      <div class="hero-buttons">
+        <a href="#ubicacion" class="btn btn-primary">¿Cómo llegar?</a>
+        <a href="#contacto" class="btn btn-outline">Seguinos en redes</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SOLAS -->
+  <section class="solas" id="solas">
+    <div class="container">
+      <h2 class="section-title">Nuestra Fe</h2>
+      <p class="section-subtitle">Los cinco pilares de la Reforma que guiaron y siguen guiando a la Iglesia</p>
+      <div class="solas-grid">
+        <div class="sola-card">
+          <div class="latin">Sola Scriptura</div>
+          <div class="meaning">Sólo la Escritura</div>
+        </div>
+        <div class="sola-card">
+          <div class="latin">Sola Gratia</div>
+          <div class="meaning">Sólo por gracia</div>
+        </div>
+        <div class="sola-card">
+          <div class="latin">Sola Fide</div>
+          <div class="meaning">Sólo por fe</div>
+        </div>
+        <div class="sola-card">
+          <div class="latin">Solus Christus</div>
+          <div class="meaning">Sólo Cristo</div>
+        </div>
+        <div class="sola-card">
+          <div class="latin">Soli Deo Gloria</div>
+          <div class="meaning">Sólo a Dios la gloria</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>¿Quiénes somos?</h2>
+          <p>
+            Somos una iglesia bíblica en Chivilcoy que busca vivir y predicar el Evangelio de Jesucristo con fidelidad a las Escrituras.
+          </p>
+          <p>
+            Creemos que la Biblia es la Palabra inspirada de Dios y el fundamento de nuestra fe y práctica. Nuestro deseo es crecer juntos en el conocimiento de Cristo, adorar a Dios en espíritu y en verdad, y compartir el mensaje de la gracia con nuestra ciudad.
+          </p>
+          <p>
+            <strong>«Para alabanza de la gloria de su gracia»</strong> (Efesios 1:6) resume el propósito de todo lo que hacemos: que Dios sea glorificado.
+          </p>
+        </div>
+        <div class="about-visual">
+          <div class="big-cross">✝</div>
+          <p>Una iglesia centrada en la Biblia, en la gracia y en la gloria de Dios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location" id="ubicacion">
+    <div class="container">
+      <h2 class="section-title">¿Dónde estamos?</h2>
+      <p class="section-subtitle">Te esperamos con deseo de servirte</p>
+      <div class="location-card">
+        <div class="location-info">
+          <h3>Dirección</h3>
+          <p>
+            <span class="icon">📍</span>
+            <span>Ituzaingó 225<br>Chivilcoy, Buenos Aires<br>Argentina</span>
+          </p>
+          <p>
+            <span class="icon">💬</span>
+            <span>Para horarios de reuniones y consultas, escribinos por privado en Facebook o Instagram.</span>
+          </p>
+          <p style="margin-top: 1.2rem;">
+            <a href="https://www.google.com/maps/search/?api=1&query=Ituzaingó+225,+Chivilcoy,+Buenos+Aires" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.95rem;">
+              Abrir en Google Maps
+            </a>
+          </p>
+        </div>
+        <div class="map-placeholder">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🗺️</div>
+          <div>Ituzaingó 225<br>Chivilcoy</div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Ituzaingó+225,+Chivilcoy,+Buenos+Aires" target="_blank" rel="noopener">
+            Ver mapa →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVITE -->
+  <section class="invite">
+    <div class="container">
+      <h2>¡Estás invitado!</h2>
+      <p>
+        Si estás buscando una iglesia donde la Biblia sea el centro y el Evangelio de la gracia se viva con sinceridad, te esperamos. Ven y conocenos.
+      </p>
+      <a href="#contacto" class="btn btn-primary">Contactanos</a>
+    </div>
+  </section>
+
+  <!-- SOCIAL / CONTACT -->
+  <section class="social" id="contacto">
+    <div class="container">
+      <h2 class="section-title">Conectá con nosotros</h2>
+      <p class="section-subtitle">Seguinos en redes y escribinos. Estaremos felices de responderte.</p>
+      <div class="social-grid">
+        <a href="https://www.facebook.com/p/Iglesia-Centro-B%C3%ADblico-Chivilcoy-61570649224684/" target="_blank" rel="noopener" class="social-card">
+          <div class="icon">📘</div>
+          <div class="name">Facebook</div>
+          <div class="handle">Iglesia Centro Bíblico</div>
+        </a>
+        <a href="https://www.instagram.com/iglesiacentrobiblicochivilcoy/" target="_blank" rel="noopener" class="social-card">
+          <div class="icon">📸</div>
+          <div class="name">Instagram</div>
+          <div class="handle">@iglesiacentrobiblicochivilcoy</div>
+        </a>
+        <a href="https://www.youtube.com/@IglesiaCentroBiblicoChivilcoy" target="_blank" rel="noopener" class="social-card">
+          <div class="icon">▶️</div>
+          <div class="name">YouTube</div>
+          <div class="handle">Predicaciones y más</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">Iglesia Centro Bíblico Chivilcoy</div>
+    <p class="verse-footer">«Para alabanza de la gloria de su gracia» — Efesios 1:6</p>
+    <p class="copy">© 2026 Iglesia Centro Bíblico Chivilcoy · Todos los derechos reservados</p>
+  </footer>
+
+   <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <!-- Reemplazá el número 5492346000000 por el WhatsApp real de la iglesia (código país + área + número, sin + ni espacios) -->
+  <a href="https://wa.me/5491131525465?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20la%20Iglesia%20Centro%20B%C3%ADblico%20Chivilcoy"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Escribinos por WhatsApp">
+    <span class="tooltip">Escribinos por WhatsApp</span>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
